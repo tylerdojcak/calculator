@@ -51,3 +51,28 @@ html {
     bottom: 0;
     right: 25px;
 }
+
+#keyboard {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    grid-row-gap: 25px;
+}
+
+button {
+    background-color: yellowgreen;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#zero {
+    grid-column: 2 / span 1;
+}
+
+#equals {
+    grid-column: 4 / span 1;
+}
