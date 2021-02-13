@@ -83,28 +83,42 @@ document.querySelector("#zero").addEventListener("click", zero);
 function add() {
     if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
         document.querySelector("#history").innerHTML += "+";
+        num1 = parseInt(document.querySelector("#result").innerHTML);
+        document.querySelector("#result").innerHTML = "";
     }
 }
 function subtract() {
     if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
         document.querySelector("#history").innerHTML += "-";
+        num1 = parseInt(document.querySelector("#result").innerHTML);
+        document.querySelector("#result").innerHTML = "";
     }
 }
 function multiply() {
     if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
         document.querySelector("#history").innerHTML += "*";
+        num1 = parseInt(document.querySelector("#result").innerHTML);
+        document.querySelector("#result").innerHTML = "";
     }
 }
 function divide() {
     if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
         document.querySelector("#history").innerHTML += "&divide;";
+        num1 = parseInt(document.querySelector("#result").innerHTML);
+        document.querySelector("#result").innerHTML = "";
     }
 }
 function mod() {
     if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
         document.querySelector("#history").innerHTML += " mod ";
+        num1 = parseInt(document.querySelector("#result").innerHTML);
+        document.querySelector("#result").innerHTML = "";
     }
 }
+
+//EQUALS FUNCTION
+
+
 
 //OPERATOR EVENT LISTENERS
 
