@@ -81,19 +81,29 @@ document.querySelector("#zero").addEventListener("click", zero);
 //OPERATOR FUNCTIONS
 
 function add() {
-    document.querySelector("#history").innerHTML += "+"
+    if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
+        document.querySelector("#history").innerHTML += "+";
+    }
 }
 function subtract() {
-    document.querySelector("#history").innerHTML += "-"
+    if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
+        document.querySelector("#history").innerHTML += "-";
+    }
 }
 function multiply() {
-    document.querySelector("#history").innerHTML += "*"
+    if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
+        document.querySelector("#history").innerHTML += "*";
+    }
 }
 function divide() {
-    document.querySelector("#history").innerHTML += "&divide;"
+    if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
+        document.querySelector("#history").innerHTML += "&divide;";
+    }
 }
 function mod() {
-    document.querySelector("#history").innerHTML += " mod "
+    if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
+        document.querySelector("#history").innerHTML += " mod ";
+    }
 }
 
 //OPERATOR EVENT LISTENERS
