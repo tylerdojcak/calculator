@@ -29,7 +29,7 @@ html {
 }
 
 #history {
-    background-color: tomato;
+    color: rgb(70, 70, 70);
     width: 90%;
     height: 40%;
     margin: 0 auto 0 auto;
@@ -41,7 +41,6 @@ html {
 }
 
 #result {
-    background-color: teal;
     width: 90%;
     height: 50%;
     margin: 0 auto 0 auto;
