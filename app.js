@@ -1,8 +1,6 @@
 var num1;
 var num2;
-var sum;
 var result;
-var operator;
 
 //CLEAR FUNCTIONS
 
