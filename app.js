@@ -1,10 +1,7 @@
 var num1;
 var num2;
 var sum;
-var difference;
-var product;
-var quotient;
-var remainder;
+var result;
 var operator;
 
 //CLEAR FUNCTIONS
@@ -118,7 +115,24 @@ function mod() {
 
 //EQUALS FUNCTION
 
-
+function equals() {
+    num2 = parseInt(document.querySelector("#result").innerHTML);
+    if (document.querySelector("#history").innerHTML.includes("+")) {
+        result = num1 + num2;
+    }   else if (document.querySelector("#history").innerHTML.includes("-")) {
+            result = num1 - num2;
+        }
+        else if (document.querySelector("#history").innerHTML.includes("*")) {
+            result = num1 * num2;
+        }
+        else if (document.querySelector("#history").innerHTML.includes("÷")) {
+            result = num1 / num2;
+        }
+        else if (document.querySelector("#history").innerHTML.includes("mod")) {
+            result = num1 % num2;
+        }
+    document.querySelector("#result").innerHTML = result;
+}
 
 //OPERATOR EVENT LISTENERS
 
@@ -127,4 +141,5 @@ document.querySelector("#minus").addEventListener("click", subtract);
 document.querySelector("#times").addEventListener("click", multiply);
 document.querySelector("#divided-by").addEventListener("click", divide);
 document.querySelector("#mod").addEventListener("click", mod);
+document.querySelector("#equals").addEventListener("click", equals);
 
