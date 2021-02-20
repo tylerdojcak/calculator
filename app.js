@@ -78,35 +78,35 @@ document.querySelector("#zero").addEventListener("click", zero);
 function add() {
     if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
         document.querySelector("#history").innerHTML += "+";
-        num1 = parseInt(document.querySelector("#result").innerHTML);
+        result = parseInt(document.querySelector("#result").innerHTML);
         document.querySelector("#result").innerHTML = "";
     }
 }
 function subtract() {
     if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
         document.querySelector("#history").innerHTML += "-";
-        num1 = parseInt(document.querySelector("#result").innerHTML);
+        result = parseInt(document.querySelector("#result").innerHTML);
         document.querySelector("#result").innerHTML = "";
     }
 }
 function multiply() {
     if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
         document.querySelector("#history").innerHTML += "*";
-        num1 = parseInt(document.querySelector("#result").innerHTML);
+        result = parseInt(document.querySelector("#result").innerHTML);
         document.querySelector("#result").innerHTML = "";
     }
 }
 function divide() {
     if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
         document.querySelector("#history").innerHTML += "&divide;";
-        num1 = parseInt(document.querySelector("#result").innerHTML);
+        result = parseInt(document.querySelector("#result").innerHTML);
         document.querySelector("#result").innerHTML = "";
     }
 }
 function mod() {
     if (!(document.querySelector("#history").innerHTML.includes("+") || document.querySelector("#history").innerHTML.includes("-") || document.querySelector("#history").innerHTML.includes("*") || document.querySelector("#history").innerHTML.includes("÷") || document.querySelector("#history").innerHTML.includes("mod"))) {
         document.querySelector("#history").innerHTML += " mod ";
-        num1 = parseInt(document.querySelector("#result").innerHTML);
+        result = parseInt(document.querySelector("#result").innerHTML);
         document.querySelector("#result").innerHTML = "";
     }
 }
@@ -114,17 +114,26 @@ function mod() {
 //EQUALS FUNCTION
 
 function equals() {
-    num2 = parseInt(document.querySelector("#result").innerHTML);
+    //num2 = parseInt(document.querySelector("#result").innerHTML);
     if (document.querySelector("#history").innerHTML.includes("+")) {
-        result = num1 + num2;
+        var nums = document.querySelector("#history").innerHTML.split("+");
+        num2 = parseInt(nums[1]);
+        //result = num1 + num2;
+        result += num2;
     }   else if (document.querySelector("#history").innerHTML.includes("-")) {
-            result = num1 - num2;
+            var nums = document.querySelector("#history").innerHTML.split("-");
+            num2 = parseInt(nums[1]);
+            result -= num2
         }
         else if (document.querySelector("#history").innerHTML.includes("*")) {
-            result = num1 * num2;
+            var nums = document.querySelector("#history").innerHTML.split("*");
+            num2 = parseInt(nums[1]);
+            result *= num2
         }
         else if (document.querySelector("#history").innerHTML.includes("÷")) {
-            result = num1 / num2;
+            var nums = document.querySelector("#history").innerHTML.split("÷");
+            num2 = parseInt(nums[1]);
+            result /= num2;
         }
         else if (document.querySelector("#history").innerHTML.includes("mod")) {
             result = num1 % num2;
